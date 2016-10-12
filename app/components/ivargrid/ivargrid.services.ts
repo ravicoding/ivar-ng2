@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
-import {MockData} from './tabledata.mock'
+import {MockData} from './tabledata.mock';
+import {COL} from './tabledata.mock';
 
 
 @Injectable()
 export class TableService {
 
-  getCols():String[] {
+  getCols():COL[] {
     return MockData.cols;
   }
 

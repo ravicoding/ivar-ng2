@@ -1,0 +1,38 @@
+
+
+<style>
+  thead {
+    background-color: #ddd;
+  }
+  thead td {
+    padding: 5px 7px;
+  }
+  table {
+    broder : 1px solid #ddd;
+  }
+
+</style>
+
+<H5> Ivar Grid</H5>
+
+
+<table class="table">
+  <thead>
+  <td *ngFor="let col of table.cols">
+   {{col.id}}
+  </td>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of table.rows">
+      <td *ngFor="let rd of row;let i = index;">
+        <div *ngIf="table.cols[i] && table.cols[i].type == 'link'">
+          <a href="">{{rd}}</a>
+        </div>
+        <div *ngIf="table.cols[i] && table.cols[i].type != 'link'">
+          {{rd}}
+        </div>
+      </td>
+    </tr>
+  </tbody>
+
+</table>

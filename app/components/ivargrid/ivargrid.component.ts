@@ -1,15 +1,16 @@
 import { Component } from '@angular/core'
 import {TableService} from './ivargrid.services'
+import {COL} from './tabledata.mock'
 
 
 export class Table {
   rows : String[][];
-  cols : String[];
+  cols : COL[];
 }
 
 @Component({
   selector: 'ivar-grid',
-  template: '<h3>Ivar Grid</h3>',
+  templateUrl: 'app/components/ivargrid/grid.template.html',
   providers :[TableService]
 })
 export class IvarGridComponent {
@@ -23,7 +24,14 @@ export class IvarGridComponent {
      console.log(this.table);
    }
 
+   beforeRending() {
 
+
+   }
+
+   destroy() {
+
+   }
 
 
 }
