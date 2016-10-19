@@ -5,11 +5,11 @@ This repository holds the few of generic angular2 components.
 
 **Generic angular 2 components**
 
-IVAR GRID
-IVAR CHART
-IVAR SPREAD SHEET
+##IVAR GRID
+##IVAR CHART
+##IVAR SPREAD SHEET
 
-
+![ My Dashboard ](poster.png)
 
 ## Prerequisites
 
