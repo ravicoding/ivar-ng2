@@ -9,15 +9,15 @@ import {GoogleChart} from './chart.directive';
 export class IvarPieComponent {
 
   public pie_ChartData = [
-    ['Task', 'Hours per Day'],
-    ['Work',     11],
-    ['Eat',      2],
-    ['Commute',  2],
-    ['Watch TV', 2],
-    ['Sleep',    7] ];
+    ['Region', 'Number of Cases'],
+    ['New york',     11],
+    ['Boston',      2],
+    ['Washington DC',  2],
+    ['San Francisco', 2],
+    ['Dallas',    17] ];
 
   public pie_ChartOptions  = {
-    title: 'My Daily Activities',
+    title: 'Executive Cases',
     width: 500,
     height: 400
   };

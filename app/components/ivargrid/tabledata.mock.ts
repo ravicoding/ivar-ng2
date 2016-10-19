@@ -20,7 +20,11 @@ var rows = [
   ["datac91", "datac32", "datac33"],
   ["datac10", "datac42", "datac43"],
   ["datac11", "datac32", "datac33"],
-  ["datac12", "datac42", "datac43"]
+  ["datac12", "datac42", "datac43"],
+  ["datac391", "datac32", "datac33"],
+  ["datac310", "datac42", "datac43"],
+  ["datac311", "datac32", "datac33"],
+  ["datac312", "datac42", "datac43"]
 ];
 exports.MockData = {
   cols: cols,

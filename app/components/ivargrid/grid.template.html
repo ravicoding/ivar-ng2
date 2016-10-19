@@ -7,15 +7,20 @@
   thead td {
     padding: 5px 7px;
   }
-  table {
+  .grid {
     broder : 1px solid #ddd;
-  }
+    height: 400px;
+    background-color: #f5f5f5;
+    margin: 10px;
+    overflow:auto;
+    width:95%;
+   }
 
 </style>
 
 <H5> Ivar Grid</H5>
 
-
+<div class="grid">
 <table class="table">
   <thead>
   <td *ngFor="let col of table.cols">
@@ -36,3 +41,4 @@
   </tbody>
 
 </table>
+</div>

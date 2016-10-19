@@ -1,0 +1,38 @@
+<style>
+  thead {
+    background-color: #ddd;
+  }
+  td {
+    border: 1px solid gray;
+  }
+  tbody td {
+    padding:2px !important;
+  }
+  .ivar-row-header {
+    width:30px;
+    background-color: #ddd;
+  }
+
+</style>
+
+<H5> Ivar Spread Sheet</H5>
+
+<div class="ssheet">
+  <table class="table">
+    <thead>
+    <td *ngFor="let col of cols">
+      {{col}}
+    </td>
+    </thead>
+    <tbody>
+    <tr *ngFor="let row of rows">
+      <td *ngFor="let rowi of row;let i = index;"
+          class = "{{i == 0 ? 'ivar-row-header': 'ivar-row-body'}}" (click)="onSelect($event,i,row)" >
+          {{rowi}}
+      </td>
+
+    </tr>
+    </tbody>
+
+  </table>
+</div>
