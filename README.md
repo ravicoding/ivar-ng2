@@ -1,5 +1,4 @@
 # IVAR Angular 2 componets
-[![Build Status][travis-badge]][travis-badge-url]
 
 This repository holds the few of generic angular2 components.
 

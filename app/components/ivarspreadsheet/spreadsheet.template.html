@@ -3,7 +3,7 @@
     background-color: #ddd;
   }
   td {
-    border: 1px solid gray;
+    border: 1px solid #ccc;
   }
   tbody td {
     padding:2px !important;
@@ -20,6 +20,14 @@
     overflow:auto;
     width:98%;
   }
+  td input[type="text"] {
+    width: 100%;
+    height: initial;
+    border: 0;
+  }
+  td input[type="text"]:focus {
+    border: 2px solid #d7d7d7;
+  }
 
 </style>
 
@@ -29,14 +37,15 @@
   <table class="table">
     <thead>
     <td *ngFor="let col of cols">
-      {{col}}
+      {{col.val}}
     </td>
     </thead>
     <tbody>
-    <tr *ngFor="let row of rows">
-      <td *ngFor="let rowi of row;let i = index;"
-          class = "{{i == 0 ? 'ivar-row-header': 'ivar-row-body'}}" (click)="onSelect($event,i,row)" >
-          {{rowi}}
+    <tr *ngFor="let row of rows;let ri=index;">
+      <td  *ngFor="let rowi of row;let i = index;"
+          class = "{{cols[i].editable ?  'ivar-row-body':'ivar-row-header'}}">
+           <input type="text" [value]="row[i]"   *ngIf="cols[i].editable">
+           <span  *ngIf="!cols[i].editable">{{rowi}}</span>
       </td>
 
     </tr>
